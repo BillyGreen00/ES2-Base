@@ -1,5 +1,5 @@
 {
-    "name": "New Controls",
+    "name": "deplacerSousmarin",
     "maps": [
         {
             "name": "New action map",
@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "hautbas",
+                    "type": "Button",
+                    "id": "381f85df-b19c-4437-8a7b-eb7c37960039",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -22,7 +31,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "keyboard",
                     "action": "avance",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -33,8 +42,30 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "keyboard",
                     "action": "avance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd42e17b-32e4-4e75-a9f2-409ae7355f55",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "hautbas",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe7f0e5e-6d1e-40c2-ba71-cd22d45364a6",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard",
+                    "action": "hautbas",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
