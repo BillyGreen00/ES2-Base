@@ -5,9 +5,14 @@ using UnityEngine.InputSystem;
 
 public class bougerSousMarin : MonoBehaviour
 {
+[SerializeField] private float _vitesse = 5f;
+
+
+
     
     private Rigidbody _rb;
-    Vector2 directionMouvement;
+    private Vector3 directionInput;
+    private Vector2 directionMouvement;
     [SerializeField] private float vitesseDeplacement;
 
     // Start is called before the first frame update
@@ -16,10 +21,16 @@ public class bougerSousMarin : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    void OnMonterDescendre(InputValue directionBase)
+    void OnHautBas(InputValue directionBase)
     {
         directionMouvement = directionBase.Get<Vector2>() * vitesseDeplacement;
-        directionInput = new Vector3(directionAvecVitesse.x, 0f, directionAvecVitesse.y);
+        directionMouvement = new Vector3(directionMouvement.x, 0f, directionMouvement.y);
+    }
+
+    void OnAvance(InputValue directionBase)
+    {
+        Vector2 input = directionBase.Get<Vector2>();
+        directionInput.z = input.y * _vitesse;
     }
 
 
@@ -27,6 +38,6 @@ public class bougerSousMarin : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 directionSurPlane = new Vector3(directionMouvement.x, 0, directionMouvement.y);
-        _rb.AddForce(directionSurPlane, ForceMode.VelocityChange);
+        _rb.AddForce(directionMouvement, ForceMode.VelocityChange);
     }
 }

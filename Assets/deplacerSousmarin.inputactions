@@ -29,7 +29,7 @@
                     "name": "",
                     "id": "7fcc5b9e-f571-4151-a0b4-f2d8fb1517ea",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "keyboard",
                     "action": "avance",
